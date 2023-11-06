@@ -1,0 +1,19 @@
+Restoring modules from user's plumed2_torch
+/mnt/home/lyuliyao/gromacs_2018/bin/gmx_mpi: error while loading shared libraries: libc10.so: cannot open shared object file: No such file or directory
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[14567,1],0]
+  Exit code:    127
+--------------------------------------------------------------------------
+plumed: error while loading shared libraries: libc10.so: cannot open shared object file: No such file or directory
+JobID                     Submit  Partition    CPUTime    Elapsed     MaxRSS        NodeList  ReqCPUS 
+------------ ------------------- ---------- ---------- ---------- ---------- --------------- -------- 
+24719116     2023-10-30T11:30:50 multiscal+   00:00:15   00:00:15                    nvf-017        1 
+24719116.ba+ 2023-10-30T11:31:15              00:00:15   00:00:15                    nvf-017        1 
+24719116.ex+ 2023-10-30T11:31:15              00:00:15   00:00:15                    nvf-017        1 

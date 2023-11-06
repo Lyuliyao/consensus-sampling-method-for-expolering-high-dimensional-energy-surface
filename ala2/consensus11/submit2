@@ -1,0 +1,8 @@
+JOBID=$(sbatch --parsable md1)
+JOBID=$(sbatch --parsable --dependency=afterok:$JOBID train1)
+for i in {12..20}
+do
+echo "sbatch --parsable --dependency=afterok:$JOBID md$i"
+JOBID=$(sbatch --parsable --dependency=afterok:$JOBID md$i)
+JOBID=$(sbatch --parsable --dependency=afterok:$JOBID train$i)
+done

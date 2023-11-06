@@ -1,0 +1,15 @@
+#!/bin/bash --login
+#SBATCH -N 1
+#SBATCH --cpus-per-task=1
+#SBATCH --gres=gpu:v100s:1
+#SBATCH --time=4:00:00
+#SBATCH --mem=24G
+#SBATCH -A multiscaleml
+#SBATCH --job=train1
+
+ml purge
+ml Conda
+conda activate pytorch_a100
+python3 -c "import train as tr; import model as model ;p = tr.train(2,2)"
+sacct --format=JobID,Submit,Partition,CPUTime,Elapsed,MaxRSS,NodeList,ReqCPUS --units=M -j $SLURM_JOBID
+            

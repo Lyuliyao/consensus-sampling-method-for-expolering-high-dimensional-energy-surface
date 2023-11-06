@@ -1,0 +1,9 @@
+
+
+    # vim:ft=plumed
+    # since simulation run in subdir, we refer to a file in the parent dir:
+    phi1: TORSION ATOMS=5,7,9,15
+    psi1: TORSION ATOMS=7,9,15,17
+    ene: ENERGY
+    ADACHANGE_F11 ARG=phi1,psi1 N_ESAMBLE=10 KAPPA=500.0,500.0  LABEL=restraint XI=1 BETAH=0.2 BETAL=10 ET=100 FDT=5000 EPSILON=1 ALPHA=0.2 GAMMA=0.1 CPT=5000 BP=../model_save/potential18.jlt DR=1.0 SB=0.0 AT_FILE=../AT.txt
+    

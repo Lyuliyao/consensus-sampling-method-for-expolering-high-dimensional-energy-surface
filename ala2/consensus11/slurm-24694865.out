@@ -1,0 +1,453 @@
+Restoring modules from user's plumed2_torch
+               :-) GROMACS - gmx grompp, 2020.7-plumed-2.8.1 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2022, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2020.7-plumed-2.8.1
+Executable:   /mnt/home/lyuliyao/gromacs_2020/bin/gmx_mpi
+Data prefix:  /mnt/home/lyuliyao/gromacs_2020
+Working dir:  /mnt/ufs18/rs-003/MultiscaleML_group/Liyao/consensus_base_enerfy_surface/ala2_sol/consensus11
+Command line:
+  gmx_mpi grompp -o ala2.tpr -c conf.gro -f grompp.mdp -maxwarn 3
+
+Ignoring obsolete mdp entry 'optimize-fft'
+Ignoring obsolete mdp entry 'ns-type'
+Replacing old mdp entry 'verlet-buffer-drift' by 'verlet-buffer-tolerance'
+Replacing old mdp entry 'nstxtcout' by 'nstxout-compressed'
+Replacing old mdp entry 'xtc-grps' by 'compressed-x-grps'
+Replacing old mdp entry 'xtc-precision' by 'compressed-x-precision'
+Setting the LD random seed to -675614081
+Generated 2145 of the 2145 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 2145 of the 2145 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'Protein'
+Excluding 2 bonded neighbours molecule type 'SOL'
+Number of degrees of freedom in T-Coupling group Water is 2295.07
+Number of degrees of freedom in T-Coupling group non-Water is 53.93
+Estimate for the relative computational load of the PME mesh part: 0.25
+
+GROMACS reminds you: "Nurture Another Mind, Before Yours Expires" (Arrested Development)
+
+turning H bonds into constraints...
+turning H bonds into constraints...
+Analysing residue names:
+There are:     3    Protein residues
+There are:   383      Water residues
+Analysing Protein...
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 20x20x20, spacing 0.114 0.114 0.114
+This run will generate roughly 0 Mb of data
+                :-) GROMACS - gmx mdrun, 2020.7-plumed-2.8.1 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2022, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2020.7-plumed-2.8.1
+Executable:   /mnt/home/lyuliyao/gromacs_2020/bin/gmx_mpi
+Data prefix:  /mnt/home/lyuliyao/gromacs_2020
+Working dir:  /mnt/ufs18/rs-003/MultiscaleML_group/Liyao/consensus_base_enerfy_surface/ala2_sol/consensus11
+Command line:
+  gmx_mpi mdrun -s ala2.tpr -plumed ./plumed1.dat -ntomp 1 -nsteps 1000 -c conf.gro -nb cpu
+
+Compiled SIMD: AVX2_256, but for this host/run AVX_512 might be better (see
+log).
+Reading file ala2.tpr, VERSION 2020.7-plumed-2.8.1 (single precision)
+Overriding nsteps with value passed on the command line: 1000 steps, 2 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Using 4 MPI processes
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread per MPI process
+
+starting mdrun 'Protein'
+1000 steps,      2.0 ps.
+
+Writing final coordinates.
+
+
+Dynamic load balancing report:
+ DLB was off during the run due to low measured imbalance.
+ Average load imbalance: 9.0%.
+ The balanceable part of the MD step is 3%, load imbalance is computed from this.
+ Part of the total run time spent waiting due to load imbalance: 0.3%.
+
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        4.189        1.047      399.9
+                 (ns/day)    (hour/ns)
+Performance:      165.148        0.145
+
+GROMACS reminds you: "Our struggle today is not to have a female Einstein get appointed as an assistant professor. It is for a woman schlemiel to get as quickly promoted as a male schlemiel." (Bella Abzug)
+
+               :-) GROMACS - gmx grompp, 2020.7-plumed-2.8.1 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2022, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx grompp, version 2020.7-plumed-2.8.1
+Executable:   /mnt/home/lyuliyao/gromacs_2020/bin/gmx_mpi
+Data prefix:  /mnt/home/lyuliyao/gromacs_2020
+Working dir:  /mnt/ufs18/rs-003/MultiscaleML_group/Liyao/consensus_base_enerfy_surface/ala2_sol/consensus11
+Command line:
+  gmx_mpi grompp -o ala2.tpr -c conf.gro -f grompp.mdp -maxwarn 3
+
+Ignoring obsolete mdp entry 'optimize-fft'
+Ignoring obsolete mdp entry 'ns-type'
+Replacing old mdp entry 'verlet-buffer-drift' by 'verlet-buffer-tolerance'
+Replacing old mdp entry 'nstxtcout' by 'nstxout-compressed'
+Replacing old mdp entry 'xtc-grps' by 'compressed-x-grps'
+Replacing old mdp entry 'xtc-precision' by 'compressed-x-precision'
+Setting the LD random seed to 2011159419
+Generated 2145 of the 2145 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+Generated 2145 of the 2145 1-4 parameter combinations
+Excluding 3 bonded neighbours molecule type 'Protein'
+Excluding 2 bonded neighbours molecule type 'SOL'
+Number of degrees of freedom in T-Coupling group Water is 2295.07
+Number of degrees of freedom in T-Coupling group non-Water is 53.93
+Estimate for the relative computational load of the PME mesh part: 0.25
+
+GROMACS reminds you: "The Poodle Chews It" (F. Zappa)
+
+turning H bonds into constraints...
+turning H bonds into constraints...
+Analysing residue names:
+There are:     3    Protein residues
+There are:   383      Water residues
+Analysing Protein...
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 20x20x20, spacing 0.114 0.114 0.114
+This run will generate roughly 0 Mb of data
+                :-) GROMACS - gmx mdrun, 2020.7-plumed-2.8.1 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2022, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2020.7-plumed-2.8.1
+Executable:   /mnt/home/lyuliyao/gromacs_2020/bin/gmx_mpi
+Data prefix:  /mnt/home/lyuliyao/gromacs_2020
+Working dir:  /mnt/ufs18/rs-003/MultiscaleML_group/Liyao/consensus_base_enerfy_surface/ala2_sol/consensus11
+Command line:
+  gmx_mpi mdrun -s ../ala2.tpr -c conf.gro -plumed ../plumed.dat -multidir ./esamble_1 ./esamble_2 ./esamble_3 ./esamble_4 ./esamble_5 ./esamble_6 ./esamble_7 ./esamble_8 ./esamble_9 ./esamble_10 -ntomp 1 -nsteps 100000 -nb cpu
+
+Compiled SIMD: AVX2_256, but for this host/run AVX_512 might be better (see
+log).
+Reading file ../ala2.tpr, VERSION 2020.7-plumed-2.8.1 (single precision)
+Reading file ../ala2.tpr, VERSION 2020.7-plumed-2.8.1 (single precision)
+Reading file ../ala2.tpr, VERSION 2020.7-plumed-2.8.1 (single precision)
+Reading file ../ala2.tpr, VERSION 2020.7-plumed-2.8.1 (single precision)
+Reading file ../ala2.tpr, VERSION 2020.7-plumed-2.8.1 (single precision)
+Reading file ../ala2.tpr, VERSION 2020.7-plumed-2.8.1 (single precision)
+Reading file ../ala2.tpr, VERSION 2020.7-plumed-2.8.1 (single precision)
+Reading file ../ala2.tpr, VERSION 2020.7-plumed-2.8.1 (single precision)
+Reading file ../ala2.tpr, VERSION 2020.7-plumed-2.8.1 (single precision)
+Reading file ../ala2.tpr, VERSION 2020.7-plumed-2.8.1 (single precision)
+Overriding nsteps with value passed on the command line: 100000 steps, 200 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 100000 steps, 200 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 100000 steps, 200 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 100000 steps, 200 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 100000 steps, 200 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 100000 steps, 200 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 100000 steps, 200 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 100000 steps, 200 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 100000 steps, 200 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 100000 steps, 200 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+This is simulation 4 out of 10 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 0 out of 10 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 2 out of 10 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 3 out of 10 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 5 out of 10 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 6 out of 10 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 7 out of 10 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 8 out of 10 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 9 out of 10 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+This is simulation 1 out of 10 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 1 MPI process
+
+Non-default thread affinity set, disabling internal thread affinity
+
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread 
+
+
+Using 1 OpenMP thread 
+
+
+Using 1 OpenMP thread 
+
+
+Using 1 OpenMP thread 
+
+
+Using 1 OpenMP thread 
+
+
+
+Using 1 OpenMP thread 
+
+
+Using 1 OpenMP thread 
+
+
+Using 1 OpenMP thread 
+
+Using 1 OpenMP thread 
+
+
+Using 1 OpenMP thread 
+
+starting mdrun 'Protein'
+100000 steps,    200.0 ps.
+starting mdrun 'Protein'
+100000 steps,    200.0 ps.
+starting mdrun 'Protein'
+100000 steps,    200.0 ps.
+starting mdrun 'Protein'
+100000 steps,    200.0 ps.
+starting mdrun 'Protein'
+100000 steps,    200.0 ps.
+starting mdrun 'Protein'
+100000 steps,    200.0 ps.
+starting mdrun 'Protein'
+100000 steps,    200.0 ps.
+starting mdrun 'Protein'
+100000 steps,    200.0 ps.
+starting mdrun 'Protein'
+100000 steps,    200.0 ps.
+starting mdrun 'Protein'
+100000 steps,    200.0 ps.
+1
+4
+0
+2
+5
+7
+8
+9
+6
+3
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+Writing final coordinates.
+
+NOTE: 14 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+NOTE: 14 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+NOTE: 14 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+NOTE: 14 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+NOTE: 14 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+NOTE: 14 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+NOTE: 14 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+NOTE: 14 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+NOTE: 14 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+NOTE: 14 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+GROMACS reminds you: "Just Because the Sun Wants a Place In the Sky" (F. Zappa)
+
+rm: missing operand
+Try 'rm --help' for more information.
+JobID                     Submit  Partition    CPUTime    Elapsed     MaxRSS        NodeList  ReqCPUS 
+------------ ------------------- ---------- ---------- ---------- ---------- --------------- -------- 
+24694865     2023-10-29T20:12:58 multiscal+   00:24:30   00:02:27                    nvf-017       10 
+24694865.ba+ 2023-10-29T20:49:11              00:24:30   00:02:27                    nvf-017       10 
+24694865.ex+ 2023-10-29T20:49:11              00:24:30   00:02:27                    nvf-017       10 
+24694865.0   2023-10-29T20:49:23              00:00:20   00:00:02                    nvf-017       10 
+24694865.1   2023-10-29T20:49:29              00:00:30   00:00:03      0.54M         nvf-017       10 
+24694865.2   2023-10-29T20:49:35              00:00:30   00:00:03                    nvf-017       10 
+24694865.3   2023-10-29T20:49:40              00:19:40   00:01:58                    nvf-017       10 
