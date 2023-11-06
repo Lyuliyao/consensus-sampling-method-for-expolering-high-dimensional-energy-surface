@@ -1,0 +1,12 @@
+
+
+    # vim:ft=plumed
+    # since simulation run in subdir, we refer to a file in the parent dir:
+    ome1: TORSION ATOMS=6,1,7,8
+    phi1: TORSION ATOMS=1,7,8,11
+    psi1: TORSION ATOMS=7,8,11,30
+    ene: ENERGY
+    BIAS_TORCH ARG=ome1,phi1,psi1 BP=./model_save/potential19.jlt  SC=1.0
+    PRINT ARG=ome1,phi1,psi1 FILE=COLVAR STRIDE=1
+
+    
