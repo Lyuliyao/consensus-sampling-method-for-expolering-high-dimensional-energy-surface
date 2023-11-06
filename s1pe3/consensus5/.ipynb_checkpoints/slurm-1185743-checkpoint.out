@@ -1,0 +1,1017 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"openmpi/4.1.1-gcc8.3.1"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "openmpi/4.1.1-gcc8.3.1"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+i=  1
+loss1 = tensor(0.0772, device='cuda:0')
+i=  101
+loss1 = tensor(0.0846, device='cuda:0')
+i=  201
+loss1 = tensor(0.1249, device='cuda:0')
+i=  301
+loss1 = tensor(0.4108, device='cuda:0')
+i=  401
+loss1 = tensor(0.1582, device='cuda:0')
+i=  501
+loss1 = tensor(0.1487, device='cuda:0')
+i=  601
+loss1 = tensor(0.1236, device='cuda:0')
+i=  701
+loss1 = tensor(0.1260, device='cuda:0')
+i=  801
+loss1 = tensor(0.1252, device='cuda:0')
+i=  901
+loss1 = tensor(0.1194, device='cuda:0')
+i=  1001
+loss1 = tensor(0.1079, device='cuda:0')
+i=  1101
+loss1 = tensor(0.1227, device='cuda:0')
+i=  1201
+loss1 = tensor(0.1118, device='cuda:0')
+i=  1301
+loss1 = tensor(0.1194, device='cuda:0')
+i=  1401
+loss1 = tensor(0.1237, device='cuda:0')
+i=  1501
+loss1 = tensor(0.1272, device='cuda:0')
+i=  1601
+loss1 = tensor(0.1265, device='cuda:0')
+i=  1701
+loss1 = tensor(0.1333, device='cuda:0')
+i=  1801
+loss1 = tensor(0.1061, device='cuda:0')
+i=  1901
+loss1 = tensor(0.1223, device='cuda:0')
+i=  2001
+loss1 = tensor(0.1228, device='cuda:0')
+i=  2101
+loss1 = tensor(0.1168, device='cuda:0')
+i=  2201
+loss1 = tensor(0.1094, device='cuda:0')
+i=  2301
+loss1 = tensor(0.1237, device='cuda:0')
+i=  2401
+loss1 = tensor(0.1100, device='cuda:0')
+i=  2501
+loss1 = tensor(0.1093, device='cuda:0')
+i=  2601
+loss1 = tensor(0.1157, device='cuda:0')
+i=  2701
+loss1 = tensor(0.1090, device='cuda:0')
+i=  2801
+loss1 = tensor(0.1153, device='cuda:0')
+i=  2901
+loss1 = tensor(0.1102, device='cuda:0')
+i=  3001
+loss1 = tensor(0.1125, device='cuda:0')
+i=  3101
+loss1 = tensor(0.1325, device='cuda:0')
+i=  3201
+loss1 = tensor(0.1116, device='cuda:0')
+i=  3301
+loss1 = tensor(0.1070, device='cuda:0')
+i=  3401
+loss1 = tensor(0.1167, device='cuda:0')
+i=  3501
+loss1 = tensor(0.1127, device='cuda:0')
+i=  3601
+loss1 = tensor(0.1098, device='cuda:0')
+i=  3701
+loss1 = tensor(0.1185, device='cuda:0')
+i=  3801
+loss1 = tensor(0.1175, device='cuda:0')
+i=  3901
+loss1 = tensor(0.1194, device='cuda:0')
+i=  4001
+loss1 = tensor(0.1269, device='cuda:0')
+i=  4101
+loss1 = tensor(0.1085, device='cuda:0')
+i=  4201
+loss1 = tensor(0.1119, device='cuda:0')
+i=  4301
+loss1 = tensor(0.1189, device='cuda:0')
+i=  4401
+loss1 = tensor(0.1129, device='cuda:0')
+i=  4501
+loss1 = tensor(0.1342, device='cuda:0')
+i=  4601
+loss1 = tensor(0.1202, device='cuda:0')
+i=  4701
+loss1 = tensor(0.1178, device='cuda:0')
+i=  4801
+loss1 = tensor(0.1133, device='cuda:0')
+i=  4901
+loss1 = tensor(0.1193, device='cuda:0')
+i=  5001
+loss1 = tensor(0.1080, device='cuda:0')
+i=  5101
+loss1 = tensor(0.1119, device='cuda:0')
+i=  5201
+loss1 = tensor(0.1070, device='cuda:0')
+i=  5301
+loss1 = tensor(0.1112, device='cuda:0')
+i=  5401
+loss1 = tensor(0.1114, device='cuda:0')
+i=  5501
+loss1 = tensor(0.1034, device='cuda:0')
+i=  5601
+loss1 = tensor(0.1053, device='cuda:0')
+i=  5701
+loss1 = tensor(0.1054, device='cuda:0')
+i=  5801
+loss1 = tensor(0.1033, device='cuda:0')
+i=  5901
+loss1 = tensor(0.1213, device='cuda:0')
+i=  6001
+loss1 = tensor(0.1214, device='cuda:0')
+i=  6101
+loss1 = tensor(0.1011, device='cuda:0')
+i=  6201
+loss1 = tensor(0.1089, device='cuda:0')
+i=  6301
+loss1 = tensor(0.1237, device='cuda:0')
+i=  6401
+loss1 = tensor(0.1057, device='cuda:0')
+i=  6501
+loss1 = tensor(0.1167, device='cuda:0')
+i=  6601
+loss1 = tensor(0.1154, device='cuda:0')
+i=  6701
+loss1 = tensor(0.1055, device='cuda:0')
+i=  6801
+loss1 = tensor(0.1081, device='cuda:0')
+i=  6901
+loss1 = tensor(0.1216, device='cuda:0')
+i=  7001
+loss1 = tensor(0.0992, device='cuda:0')
+i=  7101
+loss1 = tensor(0.1113, device='cuda:0')
+i=  7201
+loss1 = tensor(0.1007, device='cuda:0')
+i=  7301
+loss1 = tensor(0.1068, device='cuda:0')
+i=  7401
+loss1 = tensor(0.1053, device='cuda:0')
+i=  7501
+loss1 = tensor(0.1152, device='cuda:0')
+i=  7601
+loss1 = tensor(0.1147, device='cuda:0')
+i=  7701
+loss1 = tensor(0.1090, device='cuda:0')
+i=  7801
+loss1 = tensor(0.1110, device='cuda:0')
+i=  7901
+loss1 = tensor(0.1083, device='cuda:0')
+i=  8001
+loss1 = tensor(0.1050, device='cuda:0')
+i=  8101
+loss1 = tensor(0.1044, device='cuda:0')
+i=  8201
+loss1 = tensor(0.1062, device='cuda:0')
+i=  8301
+loss1 = tensor(0.1146, device='cuda:0')
+i=  8401
+loss1 = tensor(0.0992, device='cuda:0')
+i=  8501
+loss1 = tensor(0.1100, device='cuda:0')
+i=  8601
+loss1 = tensor(0.1115, device='cuda:0')
+i=  8701
+loss1 = tensor(0.0982, device='cuda:0')
+i=  8801
+loss1 = tensor(0.1138, device='cuda:0')
+i=  8901
+loss1 = tensor(0.1193, device='cuda:0')
+i=  9001
+loss1 = tensor(0.1028, device='cuda:0')
+i=  9101
+loss1 = tensor(0.1104, device='cuda:0')
+i=  9201
+loss1 = tensor(0.1133, device='cuda:0')
+i=  9301
+loss1 = tensor(0.0995, device='cuda:0')
+i=  9401
+loss1 = tensor(0.1103, device='cuda:0')
+i=  9501
+loss1 = tensor(0.1150, device='cuda:0')
+i=  9601
+loss1 = tensor(0.1031, device='cuda:0')
+i=  9701
+loss1 = tensor(0.1100, device='cuda:0')
+i=  9801
+loss1 = tensor(0.1079, device='cuda:0')
+i=  9901
+loss1 = tensor(0.1070, device='cuda:0')
+i=  10001
+loss1 = tensor(0.1192, device='cuda:0')
+i=  10101
+loss1 = tensor(0.0990, device='cuda:0')
+i=  10201
+loss1 = tensor(0.1060, device='cuda:0')
+i=  10301
+loss1 = tensor(0.1060, device='cuda:0')
+i=  10401
+loss1 = tensor(0.1002, device='cuda:0')
+i=  10501
+loss1 = tensor(0.1112, device='cuda:0')
+i=  10601
+loss1 = tensor(0.1114, device='cuda:0')
+i=  10701
+loss1 = tensor(0.0959, device='cuda:0')
+i=  10801
+loss1 = tensor(0.1016, device='cuda:0')
+i=  10901
+loss1 = tensor(0.1040, device='cuda:0')
+i=  11001
+loss1 = tensor(0.1002, device='cuda:0')
+i=  11101
+loss1 = tensor(0.1014, device='cuda:0')
+i=  11201
+loss1 = tensor(0.1057, device='cuda:0')
+i=  11301
+loss1 = tensor(0.1077, device='cuda:0')
+i=  11401
+loss1 = tensor(0.1166, device='cuda:0')
+i=  11501
+loss1 = tensor(0.1106, device='cuda:0')
+i=  11601
+loss1 = tensor(0.1051, device='cuda:0')
+i=  11701
+loss1 = tensor(0.1099, device='cuda:0')
+i=  11801
+loss1 = tensor(0.1086, device='cuda:0')
+i=  11901
+loss1 = tensor(0.0972, device='cuda:0')
+i=  12001
+loss1 = tensor(0.1088, device='cuda:0')
+i=  12101
+loss1 = tensor(0.0998, device='cuda:0')
+i=  12201
+loss1 = tensor(0.1045, device='cuda:0')
+i=  12301
+loss1 = tensor(0.1054, device='cuda:0')
+i=  12401
+loss1 = tensor(0.0977, device='cuda:0')
+i=  12501
+loss1 = tensor(0.1106, device='cuda:0')
+i=  12601
+loss1 = tensor(0.1028, device='cuda:0')
+i=  12701
+loss1 = tensor(0.0952, device='cuda:0')
+i=  12801
+loss1 = tensor(0.1078, device='cuda:0')
+i=  12901
+loss1 = tensor(0.1161, device='cuda:0')
+i=  13001
+loss1 = tensor(0.0996, device='cuda:0')
+i=  13101
+loss1 = tensor(0.1021, device='cuda:0')
+i=  13201
+loss1 = tensor(0.1049, device='cuda:0')
+i=  13301
+loss1 = tensor(0.1003, device='cuda:0')
+i=  13401
+loss1 = tensor(0.1048, device='cuda:0')
+i=  13501
+loss1 = tensor(0.1056, device='cuda:0')
+i=  13601
+loss1 = tensor(0.0972, device='cuda:0')
+i=  13701
+loss1 = tensor(0.1066, device='cuda:0')
+i=  13801
+loss1 = tensor(0.1054, device='cuda:0')
+i=  13901
+loss1 = tensor(0.0963, device='cuda:0')
+i=  14001
+loss1 = tensor(0.1098, device='cuda:0')
+i=  14101
+loss1 = tensor(0.1039, device='cuda:0')
+i=  14201
+loss1 = tensor(0.0979, device='cuda:0')
+i=  14301
+loss1 = tensor(0.1045, device='cuda:0')
+i=  14401
+loss1 = tensor(0.0964, device='cuda:0')
+i=  14501
+loss1 = tensor(0.0972, device='cuda:0')
+i=  14601
+loss1 = tensor(0.1070, device='cuda:0')
+i=  14701
+loss1 = tensor(0.0982, device='cuda:0')
+i=  14801
+loss1 = tensor(0.1028, device='cuda:0')
+i=  14901
+loss1 = tensor(0.1059, device='cuda:0')
+i=  15001
+loss1 = tensor(0.0975, device='cuda:0')
+i=  15101
+loss1 = tensor(0.1054, device='cuda:0')
+i=  15201
+loss1 = tensor(0.1023, device='cuda:0')
+i=  15301
+loss1 = tensor(0.1019, device='cuda:0')
+i=  15401
+loss1 = tensor(0.1003, device='cuda:0')
+i=  15501
+loss1 = tensor(0.1066, device='cuda:0')
+i=  15601
+loss1 = tensor(0.1007, device='cuda:0')
+i=  15701
+loss1 = tensor(0.1026, device='cuda:0')
+i=  15801
+loss1 = tensor(0.0994, device='cuda:0')
+i=  15901
+loss1 = tensor(0.1030, device='cuda:0')
+i=  16001
+loss1 = tensor(0.1000, device='cuda:0')
+i=  16101
+loss1 = tensor(0.1124, device='cuda:0')
+i=  16201
+loss1 = tensor(0.0972, device='cuda:0')
+i=  16301
+loss1 = tensor(0.1086, device='cuda:0')
+i=  16401
+loss1 = tensor(0.0976, device='cuda:0')
+i=  16501
+loss1 = tensor(0.1067, device='cuda:0')
+i=  16601
+loss1 = tensor(0.1044, device='cuda:0')
+i=  16701
+loss1 = tensor(0.1035, device='cuda:0')
+i=  16801
+loss1 = tensor(0.0902, device='cuda:0')
+i=  16901
+loss1 = tensor(0.1099, device='cuda:0')
+i=  17001
+loss1 = tensor(0.0996, device='cuda:0')
+i=  17101
+loss1 = tensor(0.0980, device='cuda:0')
+i=  17201
+loss1 = tensor(0.1138, device='cuda:0')
+i=  17301
+loss1 = tensor(0.0906, device='cuda:0')
+i=  17401
+loss1 = tensor(0.0941, device='cuda:0')
+i=  17501
+loss1 = tensor(0.1150, device='cuda:0')
+i=  17601
+loss1 = tensor(0.0906, device='cuda:0')
+i=  17701
+loss1 = tensor(0.1131, device='cuda:0')
+i=  17801
+loss1 = tensor(0.1036, device='cuda:0')
+i=  17901
+loss1 = tensor(0.0960, device='cuda:0')
+i=  18001
+loss1 = tensor(0.1043, device='cuda:0')
+i=  18101
+loss1 = tensor(0.1070, device='cuda:0')
+i=  18201
+loss1 = tensor(0.1011, device='cuda:0')
+i=  18301
+loss1 = tensor(0.0994, device='cuda:0')
+i=  18401
+loss1 = tensor(0.0972, device='cuda:0')
+i=  18501
+loss1 = tensor(0.1010, device='cuda:0')
+i=  18601
+loss1 = tensor(0.1006, device='cuda:0')
+i=  18701
+loss1 = tensor(0.1155, device='cuda:0')
+i=  18801
+loss1 = tensor(0.0912, device='cuda:0')
+i=  18901
+loss1 = tensor(0.0973, device='cuda:0')
+i=  19001
+loss1 = tensor(0.1080, device='cuda:0')
+i=  19101
+loss1 = tensor(0.1045, device='cuda:0')
+i=  19201
+loss1 = tensor(0.1020, device='cuda:0')
+i=  19301
+loss1 = tensor(0.0983, device='cuda:0')
+i=  19401
+loss1 = tensor(0.1003, device='cuda:0')
+i=  19501
+loss1 = tensor(0.1004, device='cuda:0')
+i=  19601
+loss1 = tensor(0.0963, device='cuda:0')
+i=  19701
+loss1 = tensor(0.1014, device='cuda:0')
+i=  19801
+loss1 = tensor(0.1015, device='cuda:0')
+i=  19901
+loss1 = tensor(0.0973, device='cuda:0')
+i=  20001
+loss1 = tensor(0.0982, device='cuda:0')
+i=  20101
+loss1 = tensor(0.1089, device='cuda:0')
+i=  20201
+loss1 = tensor(0.0963, device='cuda:0')
+i=  20301
+loss1 = tensor(0.0934, device='cuda:0')
+i=  20401
+loss1 = tensor(0.1105, device='cuda:0')
+i=  20501
+loss1 = tensor(0.0968, device='cuda:0')
+i=  20601
+loss1 = tensor(0.1043, device='cuda:0')
+i=  20701
+loss1 = tensor(0.1020, device='cuda:0')
+i=  20801
+loss1 = tensor(0.0935, device='cuda:0')
+i=  20901
+loss1 = tensor(0.0952, device='cuda:0')
+i=  21001
+loss1 = tensor(0.0984, device='cuda:0')
+i=  21101
+loss1 = tensor(0.0887, device='cuda:0')
+i=  21201
+loss1 = tensor(0.1059, device='cuda:0')
+i=  21301
+loss1 = tensor(0.1080, device='cuda:0')
+i=  21401
+loss1 = tensor(0.0967, device='cuda:0')
+i=  21501
+loss1 = tensor(0.1019, device='cuda:0')
+i=  21601
+loss1 = tensor(0.0911, device='cuda:0')
+i=  21701
+loss1 = tensor(0.0954, device='cuda:0')
+i=  21801
+loss1 = tensor(0.1058, device='cuda:0')
+i=  21901
+loss1 = tensor(0.1008, device='cuda:0')
+i=  22001
+loss1 = tensor(0.1064, device='cuda:0')
+i=  22101
+loss1 = tensor(0.1106, device='cuda:0')
+i=  22201
+loss1 = tensor(0.1008, device='cuda:0')
+i=  22301
+loss1 = tensor(0.0957, device='cuda:0')
+i=  22401
+loss1 = tensor(0.0999, device='cuda:0')
+i=  22501
+loss1 = tensor(0.0934, device='cuda:0')
+i=  22601
+loss1 = tensor(0.0994, device='cuda:0')
+i=  22701
+loss1 = tensor(0.1086, device='cuda:0')
+i=  22801
+loss1 = tensor(0.0953, device='cuda:0')
+i=  22901
+loss1 = tensor(0.0938, device='cuda:0')
+i=  23001
+loss1 = tensor(0.1038, device='cuda:0')
+i=  23101
+loss1 = tensor(0.0957, device='cuda:0')
+i=  23201
+loss1 = tensor(0.1002, device='cuda:0')
+i=  23301
+loss1 = tensor(0.1084, device='cuda:0')
+i=  23401
+loss1 = tensor(0.0973, device='cuda:0')
+i=  23501
+loss1 = tensor(0.1013, device='cuda:0')
+i=  23601
+loss1 = tensor(0.1144, device='cuda:0')
+i=  23701
+loss1 = tensor(0.0952, device='cuda:0')
+i=  23801
+loss1 = tensor(0.0964, device='cuda:0')
+i=  23901
+loss1 = tensor(0.1021, device='cuda:0')
+i=  24001
+loss1 = tensor(0.0965, device='cuda:0')
+i=  24101
+loss1 = tensor(0.1066, device='cuda:0')
+i=  24201
+loss1 = tensor(0.1089, device='cuda:0')
+i=  24301
+loss1 = tensor(0.1023, device='cuda:0')
+i=  24401
+loss1 = tensor(0.0969, device='cuda:0')
+i=  24501
+loss1 = tensor(0.0910, device='cuda:0')
+i=  24601
+loss1 = tensor(0.0925, device='cuda:0')
+i=  24701
+loss1 = tensor(0.0956, device='cuda:0')
+i=  24801
+loss1 = tensor(0.0932, device='cuda:0')
+i=  24901
+loss1 = tensor(0.0939, device='cuda:0')
+i=  25001
+loss1 = tensor(0.1051, device='cuda:0')
+i=  25101
+loss1 = tensor(0.0892, device='cuda:0')
+i=  25201
+loss1 = tensor(0.1026, device='cuda:0')
+i=  25301
+loss1 = tensor(0.0998, device='cuda:0')
+i=  25401
+loss1 = tensor(0.0906, device='cuda:0')
+i=  25501
+loss1 = tensor(0.1079, device='cuda:0')
+i=  25601
+loss1 = tensor(0.0991, device='cuda:0')
+i=  25701
+loss1 = tensor(0.0980, device='cuda:0')
+i=  25801
+loss1 = tensor(0.1029, device='cuda:0')
+i=  25901
+loss1 = tensor(0.1026, device='cuda:0')
+i=  26001
+loss1 = tensor(0.1025, device='cuda:0')
+i=  26101
+loss1 = tensor(0.0997, device='cuda:0')
+i=  26201
+loss1 = tensor(0.1071, device='cuda:0')
+i=  26301
+loss1 = tensor(0.0956, device='cuda:0')
+i=  26401
+loss1 = tensor(0.1023, device='cuda:0')
+i=  26501
+loss1 = tensor(0.0964, device='cuda:0')
+i=  26601
+loss1 = tensor(0.0937, device='cuda:0')
+i=  26701
+loss1 = tensor(0.1017, device='cuda:0')
+i=  26801
+loss1 = tensor(0.0934, device='cuda:0')
+i=  26901
+loss1 = tensor(0.0985, device='cuda:0')
+i=  27001
+loss1 = tensor(0.0994, device='cuda:0')
+i=  27101
+loss1 = tensor(0.0951, device='cuda:0')
+i=  27201
+loss1 = tensor(0.0993, device='cuda:0')
+i=  27301
+loss1 = tensor(0.1045, device='cuda:0')
+i=  27401
+loss1 = tensor(0.1000, device='cuda:0')
+i=  27501
+loss1 = tensor(0.0942, device='cuda:0')
+i=  27601
+loss1 = tensor(0.1028, device='cuda:0')
+i=  27701
+loss1 = tensor(0.0900, device='cuda:0')
+i=  27801
+loss1 = tensor(0.0956, device='cuda:0')
+i=  27901
+loss1 = tensor(0.1016, device='cuda:0')
+i=  28001
+loss1 = tensor(0.0871, device='cuda:0')
+i=  28101
+loss1 = tensor(0.1001, device='cuda:0')
+i=  28201
+loss1 = tensor(0.1031, device='cuda:0')
+i=  28301
+loss1 = tensor(0.0903, device='cuda:0')
+i=  28401
+loss1 = tensor(0.0965, device='cuda:0')
+i=  28501
+loss1 = tensor(0.0976, device='cuda:0')
+i=  28601
+loss1 = tensor(0.0886, device='cuda:0')
+i=  28701
+loss1 = tensor(0.1098, device='cuda:0')
+i=  28801
+loss1 = tensor(0.1025, device='cuda:0')
+i=  28901
+loss1 = tensor(0.0967, device='cuda:0')
+i=  29001
+loss1 = tensor(0.0983, device='cuda:0')
+i=  29101
+loss1 = tensor(0.0960, device='cuda:0')
+i=  29201
+loss1 = tensor(0.0888, device='cuda:0')
+i=  29301
+loss1 = tensor(0.1015, device='cuda:0')
+i=  29401
+loss1 = tensor(0.0863, device='cuda:0')
+i=  29501
+loss1 = tensor(0.0927, device='cuda:0')
+i=  29601
+loss1 = tensor(0.1005, device='cuda:0')
+i=  29701
+loss1 = tensor(0.0896, device='cuda:0')
+i=  29801
+loss1 = tensor(0.0912, device='cuda:0')
+i=  29901
+loss1 = tensor(0.1018, device='cuda:0')
+i=  30001
+loss1 = tensor(0.0893, device='cuda:0')
+i=  30101
+loss1 = tensor(0.0976, device='cuda:0')
+i=  30201
+loss1 = tensor(0.1008, device='cuda:0')
+i=  30301
+loss1 = tensor(0.0895, device='cuda:0')
+i=  30401
+loss1 = tensor(0.1020, device='cuda:0')
+i=  30501
+loss1 = tensor(0.1114, device='cuda:0')
+i=  30601
+loss1 = tensor(0.0885, device='cuda:0')
+i=  30701
+loss1 = tensor(0.0911, device='cuda:0')
+i=  30801
+loss1 = tensor(0.1046, device='cuda:0')
+i=  30901
+loss1 = tensor(0.0883, device='cuda:0')
+i=  31001
+loss1 = tensor(0.0933, device='cuda:0')
+i=  31101
+loss1 = tensor(0.1011, device='cuda:0')
+i=  31201
+loss1 = tensor(0.0950, device='cuda:0')
+i=  31301
+loss1 = tensor(0.1013, device='cuda:0')
+i=  31401
+loss1 = tensor(0.1020, device='cuda:0')
+i=  31501
+loss1 = tensor(0.0960, device='cuda:0')
+i=  31601
+loss1 = tensor(0.0991, device='cuda:0')
+i=  31701
+loss1 = tensor(0.0980, device='cuda:0')
+i=  31801
+loss1 = tensor(0.0916, device='cuda:0')
+i=  31901
+loss1 = tensor(0.1026, device='cuda:0')
+i=  32001
+loss1 = tensor(0.0928, device='cuda:0')
+i=  32101
+loss1 = tensor(0.0925, device='cuda:0')
+i=  32201
+loss1 = tensor(0.0988, device='cuda:0')
+i=  32301
+loss1 = tensor(0.0872, device='cuda:0')
+i=  32401
+loss1 = tensor(0.0877, device='cuda:0')
+i=  32501
+loss1 = tensor(0.0989, device='cuda:0')
+i=  32601
+loss1 = tensor(0.0936, device='cuda:0')
+i=  32701
+loss1 = tensor(0.1027, device='cuda:0')
+i=  32801
+loss1 = tensor(0.0952, device='cuda:0')
+i=  32901
+loss1 = tensor(0.0877, device='cuda:0')
+i=  33001
+loss1 = tensor(0.0987, device='cuda:0')
+i=  33101
+loss1 = tensor(0.0912, device='cuda:0')
+i=  33201
+loss1 = tensor(0.0885, device='cuda:0')
+i=  33301
+loss1 = tensor(0.0915, device='cuda:0')
+i=  33401
+loss1 = tensor(0.1019, device='cuda:0')
+i=  33501
+loss1 = tensor(0.0890, device='cuda:0')
+i=  33601
+loss1 = tensor(0.0980, device='cuda:0')
+i=  33701
+loss1 = tensor(0.0926, device='cuda:0')
+i=  33801
+loss1 = tensor(0.0960, device='cuda:0')
+i=  33901
+loss1 = tensor(0.0965, device='cuda:0')
+i=  34001
+loss1 = tensor(0.0863, device='cuda:0')
+i=  34101
+loss1 = tensor(0.0932, device='cuda:0')
+i=  34201
+loss1 = tensor(0.0974, device='cuda:0')
+i=  34301
+loss1 = tensor(0.0929, device='cuda:0')
+i=  34401
+loss1 = tensor(0.1013, device='cuda:0')
+i=  34501
+loss1 = tensor(0.1005, device='cuda:0')
+i=  34601
+loss1 = tensor(0.0900, device='cuda:0')
+i=  34701
+loss1 = tensor(0.0909, device='cuda:0')
+i=  34801
+loss1 = tensor(0.0973, device='cuda:0')
+i=  34901
+loss1 = tensor(0.0920, device='cuda:0')
+i=  35001
+loss1 = tensor(0.1005, device='cuda:0')
+i=  35101
+loss1 = tensor(0.0953, device='cuda:0')
+i=  35201
+loss1 = tensor(0.0937, device='cuda:0')
+i=  35301
+loss1 = tensor(0.0939, device='cuda:0')
+i=  35401
+loss1 = tensor(0.1000, device='cuda:0')
+i=  35501
+loss1 = tensor(0.1005, device='cuda:0')
+i=  35601
+loss1 = tensor(0.1042, device='cuda:0')
+i=  35701
+loss1 = tensor(0.1010, device='cuda:0')
+i=  35801
+loss1 = tensor(0.0889, device='cuda:0')
+i=  35901
+loss1 = tensor(0.1049, device='cuda:0')
+i=  36001
+loss1 = tensor(0.0916, device='cuda:0')
+i=  36101
+loss1 = tensor(0.0904, device='cuda:0')
+i=  36201
+loss1 = tensor(0.1054, device='cuda:0')
+i=  36301
+loss1 = tensor(0.0917, device='cuda:0')
+i=  36401
+loss1 = tensor(0.0890, device='cuda:0')
+i=  36501
+loss1 = tensor(0.0955, device='cuda:0')
+i=  36601
+loss1 = tensor(0.0905, device='cuda:0')
+i=  36701
+loss1 = tensor(0.0913, device='cuda:0')
+i=  36801
+loss1 = tensor(0.0966, device='cuda:0')
+i=  36901
+loss1 = tensor(0.0846, device='cuda:0')
+i=  37001
+loss1 = tensor(0.0949, device='cuda:0')
+i=  37101
+loss1 = tensor(0.1034, device='cuda:0')
+i=  37201
+loss1 = tensor(0.0943, device='cuda:0')
+i=  37301
+loss1 = tensor(0.0973, device='cuda:0')
+i=  37401
+loss1 = tensor(0.1121, device='cuda:0')
+i=  37501
+loss1 = tensor(0.0904, device='cuda:0')
+i=  37601
+loss1 = tensor(0.0952, device='cuda:0')
+i=  37701
+loss1 = tensor(0.0975, device='cuda:0')
+i=  37801
+loss1 = tensor(0.0970, device='cuda:0')
+i=  37901
+loss1 = tensor(0.0947, device='cuda:0')
+i=  38001
+loss1 = tensor(0.1033, device='cuda:0')
+i=  38101
+loss1 = tensor(0.0943, device='cuda:0')
+i=  38201
+loss1 = tensor(0.0941, device='cuda:0')
+i=  38301
+loss1 = tensor(0.1042, device='cuda:0')
+i=  38401
+loss1 = tensor(0.0884, device='cuda:0')
+i=  38501
+loss1 = tensor(0.0931, device='cuda:0')
+i=  38601
+loss1 = tensor(0.0934, device='cuda:0')
+i=  38701
+loss1 = tensor(0.0979, device='cuda:0')
+i=  38801
+loss1 = tensor(0.0943, device='cuda:0')
+i=  38901
+loss1 = tensor(0.0926, device='cuda:0')
+i=  39001
+loss1 = tensor(0.0919, device='cuda:0')
+i=  39101
+loss1 = tensor(0.1034, device='cuda:0')
+i=  39201
+loss1 = tensor(0.0867, device='cuda:0')
+i=  39301
+loss1 = tensor(0.0974, device='cuda:0')
+i=  39401
+loss1 = tensor(0.0952, device='cuda:0')
+i=  39501
+loss1 = tensor(0.0911, device='cuda:0')
+i=  39601
+loss1 = tensor(0.1023, device='cuda:0')
+i=  39701
+loss1 = tensor(0.0969, device='cuda:0')
+i=  39801
+loss1 = tensor(0.0937, device='cuda:0')
+i=  39901
+loss1 = tensor(0.0966, device='cuda:0')
+i=  40001
+loss1 = tensor(0.1017, device='cuda:0')
+i=  40101
+loss1 = tensor(0.0959, device='cuda:0')
+i=  40201
+loss1 = tensor(0.0902, device='cuda:0')
+i=  40301
+loss1 = tensor(0.1018, device='cuda:0')
+i=  40401
+loss1 = tensor(0.0893, device='cuda:0')
+i=  40501
+loss1 = tensor(0.1029, device='cuda:0')
+i=  40601
+loss1 = tensor(0.1023, device='cuda:0')
+i=  40701
+loss1 = tensor(0.0906, device='cuda:0')
+i=  40801
+loss1 = tensor(0.0966, device='cuda:0')
+i=  40901
+loss1 = tensor(0.0962, device='cuda:0')
+i=  41001
+loss1 = tensor(0.0927, device='cuda:0')
+i=  41101
+loss1 = tensor(0.0956, device='cuda:0')
+i=  41201
+loss1 = tensor(0.0889, device='cuda:0')
+i=  41301
+loss1 = tensor(0.0928, device='cuda:0')
+i=  41401
+loss1 = tensor(0.0910, device='cuda:0')
+i=  41501
+loss1 = tensor(0.0870, device='cuda:0')
+i=  41601
+loss1 = tensor(0.0981, device='cuda:0')
+i=  41701
+loss1 = tensor(0.0986, device='cuda:0')
+i=  41801
+loss1 = tensor(0.0872, device='cuda:0')
+i=  41901
+loss1 = tensor(0.0877, device='cuda:0')
+i=  42001
+loss1 = tensor(0.0982, device='cuda:0')
+i=  42101
+loss1 = tensor(0.0970, device='cuda:0')
+i=  42201
+loss1 = tensor(0.0930, device='cuda:0')
+i=  42301
+loss1 = tensor(0.1004, device='cuda:0')
+i=  42401
+loss1 = tensor(0.0920, device='cuda:0')
+i=  42501
+loss1 = tensor(0.0969, device='cuda:0')
+i=  42601
+loss1 = tensor(0.0998, device='cuda:0')
+i=  42701
+loss1 = tensor(0.0923, device='cuda:0')
+i=  42801
+loss1 = tensor(0.0989, device='cuda:0')
+i=  42901
+loss1 = tensor(0.1021, device='cuda:0')
+i=  43001
+loss1 = tensor(0.0906, device='cuda:0')
+i=  43101
+loss1 = tensor(0.0973, device='cuda:0')
+i=  43201
+loss1 = tensor(0.0859, device='cuda:0')
+i=  43301
+loss1 = tensor(0.0833, device='cuda:0')
+i=  43401
+loss1 = tensor(0.1014, device='cuda:0')
+i=  43501
+loss1 = tensor(0.0857, device='cuda:0')
+i=  43601
+loss1 = tensor(0.1057, device='cuda:0')
+i=  43701
+loss1 = tensor(0.0962, device='cuda:0')
+i=  43801
+loss1 = tensor(0.0896, device='cuda:0')
+i=  43901
+loss1 = tensor(0.0958, device='cuda:0')
+i=  44001
+loss1 = tensor(0.0921, device='cuda:0')
+i=  44101
+loss1 = tensor(0.0899, device='cuda:0')
+i=  44201
+loss1 = tensor(0.0938, device='cuda:0')
+i=  44301
+loss1 = tensor(0.0948, device='cuda:0')
+i=  44401
+loss1 = tensor(0.0889, device='cuda:0')
+i=  44501
+loss1 = tensor(0.0973, device='cuda:0')
+i=  44601
+loss1 = tensor(0.0991, device='cuda:0')
+i=  44701
+loss1 = tensor(0.0880, device='cuda:0')
+i=  44801
+loss1 = tensor(0.0987, device='cuda:0')
+i=  44901
+loss1 = tensor(0.1177, device='cuda:0')
+i=  45001
+loss1 = tensor(0.0891, device='cuda:0')
+i=  45101
+loss1 = tensor(0.0988, device='cuda:0')
+i=  45201
+loss1 = tensor(0.0962, device='cuda:0')
+i=  45301
+loss1 = tensor(0.0903, device='cuda:0')
+i=  45401
+loss1 = tensor(0.0868, device='cuda:0')
+i=  45501
+loss1 = tensor(0.1084, device='cuda:0')
+i=  45601
+loss1 = tensor(0.0941, device='cuda:0')
+i=  45701
+loss1 = tensor(0.1029, device='cuda:0')
+i=  45801
+loss1 = tensor(0.0948, device='cuda:0')
+i=  45901
+loss1 = tensor(0.0946, device='cuda:0')
+i=  46001
+loss1 = tensor(0.1000, device='cuda:0')
+i=  46101
+loss1 = tensor(0.0940, device='cuda:0')
+i=  46201
+loss1 = tensor(0.0978, device='cuda:0')
+i=  46301
+loss1 = tensor(0.1017, device='cuda:0')
+i=  46401
+loss1 = tensor(0.0903, device='cuda:0')
+i=  46501
+loss1 = tensor(0.0915, device='cuda:0')
+i=  46601
+loss1 = tensor(0.0996, device='cuda:0')
+i=  46701
+loss1 = tensor(0.0888, device='cuda:0')
+i=  46801
+loss1 = tensor(0.0819, device='cuda:0')
+i=  46901
+loss1 = tensor(0.0878, device='cuda:0')
+i=  47001
+loss1 = tensor(0.0902, device='cuda:0')
+i=  47101
+loss1 = tensor(0.0897, device='cuda:0')
+i=  47201
+loss1 = tensor(0.1120, device='cuda:0')
+i=  47301
+loss1 = tensor(0.0926, device='cuda:0')
+i=  47401
+loss1 = tensor(0.0943, device='cuda:0')
+i=  47501
+loss1 = tensor(0.1044, device='cuda:0')
+i=  47601
+loss1 = tensor(0.0886, device='cuda:0')
+i=  47701
+loss1 = tensor(0.0884, device='cuda:0')
+i=  47801
+loss1 = tensor(0.0948, device='cuda:0')
+i=  47901
+loss1 = tensor(0.0932, device='cuda:0')
+i=  48001
+loss1 = tensor(0.0979, device='cuda:0')
+i=  48101
+loss1 = tensor(0.0949, device='cuda:0')
+i=  48201
+loss1 = tensor(0.0871, device='cuda:0')
+i=  48301
+loss1 = tensor(0.0905, device='cuda:0')
+i=  48401
+loss1 = tensor(0.0900, device='cuda:0')
+i=  48501
+loss1 = tensor(0.0989, device='cuda:0')
+i=  48601
+loss1 = tensor(0.1051, device='cuda:0')
+i=  48701
+loss1 = tensor(0.0911, device='cuda:0')
+i=  48801
+loss1 = tensor(0.0984, device='cuda:0')
+i=  48901
+loss1 = tensor(0.0964, device='cuda:0')
+i=  49001
+loss1 = tensor(0.0808, device='cuda:0')
+i=  49101
+loss1 = tensor(0.0975, device='cuda:0')
+i=  49201
+loss1 = tensor(0.0985, device='cuda:0')
+i=  49301
+loss1 = tensor(0.0874, device='cuda:0')
+i=  49401
+loss1 = tensor(0.0961, device='cuda:0')
+i=  49501
+loss1 = tensor(0.1004, device='cuda:0')
+i=  49601
+loss1 = tensor(0.0866, device='cuda:0')
+i=  49701
+loss1 = tensor(0.0906, device='cuda:0')
+i=  49801
+loss1 = tensor(0.0932, device='cuda:0')
+i=  49901
+loss1 = tensor(0.0858, device='cuda:0')
+JobID                     Submit  Partition    CPUTime    Elapsed     MaxRSS        NodeList  ReqCPUS 
+------------ ------------------- ---------- ---------- ---------- ---------- --------------- -------- 
+1185743      2023-03-02T11:23:42        gpu   00:10:35   00:02:07                       g003        5 
+1185743.bat+ 2023-03-03T07:49:22              00:10:35   00:02:07                       g003        5 
+1185743.ext+ 2023-03-03T07:49:22              00:10:35   00:02:07                       g003        5 

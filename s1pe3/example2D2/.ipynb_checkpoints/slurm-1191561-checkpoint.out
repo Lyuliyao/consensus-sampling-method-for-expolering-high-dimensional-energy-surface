@@ -1,0 +1,27 @@
+Restoring modules from user's pp
+               :-) GROMACS - gmx mdrun, 2023-plumed_2.9.0_dev (-:
+
+Executable:   /anvil/projects/x-mth210005/Liyao/plumed/gromacslib/bin/gmx_mpi
+Data prefix:  /anvil/projects/x-mth210005/Liyao/plumed/gromacslib
+Working dir:  /anvil/projects/x-mth210005/Liyao/consensus/chi3_ref/example2D2
+Command line:
+  gmx_mpi mdrun -s ../chi3.tpr -plumed plumed_phi1_psi1.dat -nsteps 25000000 -ntomp 1
+
+
+Back Off! I just backed up md.log to ./#md.log.3#
+Reading file ../chi3.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Overriding nsteps with value passed on the command line: 25000000 steps, 2.5e+04 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Using 8 MPI processes
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread per MPI process
+
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.2#
+starting mdrun 'Generic title in water'
+25000000 steps,  25000.0 ps.

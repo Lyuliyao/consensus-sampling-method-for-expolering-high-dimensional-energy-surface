@@ -1,0 +1,22 @@
+#!/bin/bash
+## FILENAME:  myjobsubmissionfile
+#
+#SBATCH -A mth210005       # allocation name
+#SBATCH --nodes=1             # Total # of nodes 
+#SBATCH --ntasks-per-node=1   # Number of MPI ranks per node (one rank per GPU)
+#SBATCH --time=24:00:00        # Total run time limit (hh:mm:ss)
+#SBATCH -J myjobname          # Job name         # Name of stderr error file
+#SBATCH -p shared                # Queue (partition) name
+#SBATCH --mail-user=lyuliyao@msu.edu;
+#SBATCH --mail-type=all       # Send email to above address at begin and end of job
+
+# Manage processing environment, load compilers, and applications.
+
+ml restore pp
+conda activate plumed_pytorch
+
+.  /anvil/projects/x-mth210005/Liyao/pytorch/torch/sourceme.sh 
+. /anvil/projects/x-mth210005/Liyao/plumed/plumed2/sourceme.sh
+. /anvil/projects/x-mth210005/Liyao/plumed/gromacslib/bin/GMXRC.bash
+python3 consensus.py --N_iter 40 --dim 9 --nesm 64 --clean True
+sacct --format=JobID,Submit,Partition,CPUTime,Elapsed,MaxRSS,NodeList,ReqCPUS --units=M -j $SLURM_JOBID

@@ -1,0 +1,15 @@
+#!/bin/bash --login
+#SBATCH -t 48:00:00            # limit of wall clock time - how long the job will run (same as -t)
+#SBATCH -p gpu-shared
+#SBATCH -N 2            # number of different nodes - could be an exact number or a range of nodes (same as -N)
+#SBATCH -A mth210003p 
+#SBATCH --job-name run_me         # MD star RPF shorter time
+
+module load openmpi/4.1.1-gcc8.3.1
+module load fftw/3.3.8
+module load anaconda3
+conda activate  pytorch_a100
+python3 -c "import train as tr; import model as model ;p = tr.train(39,9)"
+sbatch md40
+sacct --format=JobID,Submit,Partition,CPUTime,Elapsed,MaxRSS,NodeList,ReqCPUS --units=M -j $SLURM_JOBID
+            

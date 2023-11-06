@@ -1,0 +1,2181 @@
+Restoring modules from user's pp
+              :-) GROMACS - gmx grompp, 2023-plumed_2.9.0_dev (-:
+
+Executable:   /anvil/projects/x-mth210005/Liyao/plumed/gromacslib/bin/gmx_mpi
+Data prefix:  /anvil/projects/x-mth210005/Liyao/plumed/gromacslib
+Working dir:  /anvil/projects/x-mth210005/Liyao/consensus/chi3_ref/consensus3
+Command line:
+  gmx_mpi grompp -o chi3_ref.tpr -c conf.gro -f grompp.mdp -maxwarn 3
+
+Ignoring obsolete mdp entry 'optimize-fft'
+Ignoring obsolete mdp entry 'ns-type'
+Replacing old mdp entry 'verlet-buffer-drift' by 'verlet-buffer-tolerance'
+Replacing old mdp entry 'nstxtcout' by 'nstxout-compressed'
+Replacing old mdp entry 'xtc-precision' by 'compressed-x-precision'
+
+NOTE 1 [file grompp.mdp]:
+  rlist is equal to rvdw and/or rcoulomb: there is no explicit Verlet
+  buffer. The cluster pair list does have a buffering effect, but choosing
+  a larger rlist might be necessary for good energy conservation.
+
+
+NOTE 2 [file grompp.mdp]:
+  Setting nstcalcenergy (10000) equal to nstenergy (500)
+
+
+WARNING 1 [file grompp.mdp]:
+  You are generating velocities so I am assuming you are equilibrating a
+  system. You are using Parrinello-Rahman pressure coupling, but this can
+  be unstable for equilibration. If your system crashes, try equilibrating
+  first with Berendsen pressure coupling. If you are not equilibrating the
+  system, you can probably ignore this warning.
+
+Generating 1-4 interactions: fudge = 1
+Number of degrees of freedom in T-Coupling group Water is 5835.10
+Number of degrees of freedom in T-Coupling group non-Water is 209.90
+
+There were 2 NOTEs
+
+There was 1 WARNING
+
+Back Off! I just backed up chi3_ref.tpr to ./#chi3_ref.tpr.3#
+
+GROMACS reminds you: "All You Need is Greed" (Aztec Camera)
+
+Setting the LD random seed to 2113109499
+
+Generated 98320 of the 98346 non-bonded parameter combinations
+
+Generated 64935 of the 98346 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'system1'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Setting gen_seed to -538968209
+
+Velocities were taken from a Maxwell distribution at 298 K
+Analysing residue names:
+There are:     5      Other residues
+There are:   973      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between excluded atoms is 0.397 nm between atom 1 and 11
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 32x32x32, spacing 0.108 0.108 0.108
+
+Estimate for the relative computational load of the PME mesh part: 0.27
+
+This run will generate roughly 2 Mb of data
+               :-) GROMACS - gmx mdrun, 2023-plumed_2.9.0_dev (-:
+
+Executable:   /anvil/projects/x-mth210005/Liyao/plumed/gromacslib/bin/gmx_mpi
+Data prefix:  /anvil/projects/x-mth210005/Liyao/plumed/gromacslib
+Working dir:  /anvil/projects/x-mth210005/Liyao/consensus/chi3_ref/consensus3
+Command line:
+  gmx_mpi mdrun -s chi3_ref.tpr -plumed ./plumed1.dat -ntomp 1 -nsteps 100 -c conf.gro -nb cpu
+
+
+Back Off! I just backed up md.log to ./#md.log.2#
+Reading file chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Overriding nsteps with value passed on the command line: 100 steps, 0.1 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Using 1 MPI process
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread 
+
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.2#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.2#
+starting mdrun 'Generic title in water'
+100 steps,      0.1 ps.
+
+Writing final coordinates.
+
+Back Off! I just backed up conf.gro to ./#conf.gro.2#
+
+NOTE: 1 % of the run time was spent in domain decomposition,
+      11 % of the run time was spent in pair search,
+      you might want to increase nstlist (this has no effect on accuracy)
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        0.309        0.309      100.0
+                 (ns/day)    (hour/ns)
+Performance:       28.197        0.851
+
+GROMACS reminds you: "Forget this world and all its troubles and, if possible, it's multitudinous Charlatans - everything, in short, but the Enchantress of Numbers" (Ada Lovelace)
+
+              :-) GROMACS - gmx grompp, 2023-plumed_2.9.0_dev (-:
+
+Executable:   /anvil/projects/x-mth210005/Liyao/plumed/gromacslib/bin/gmx_mpi
+Data prefix:  /anvil/projects/x-mth210005/Liyao/plumed/gromacslib
+Working dir:  /anvil/projects/x-mth210005/Liyao/consensus/chi3_ref/consensus3
+Command line:
+  gmx_mpi grompp -o chi3_ref.tpr -c conf.gro -f grompp.mdp -maxwarn 3
+
+Ignoring obsolete mdp entry 'optimize-fft'
+Ignoring obsolete mdp entry 'ns-type'
+Replacing old mdp entry 'verlet-buffer-drift' by 'verlet-buffer-tolerance'
+Replacing old mdp entry 'nstxtcout' by 'nstxout-compressed'
+Replacing old mdp entry 'xtc-precision' by 'compressed-x-precision'
+
+NOTE 1 [file grompp.mdp]:
+  rlist is equal to rvdw and/or rcoulomb: there is no explicit Verlet
+  buffer. The cluster pair list does have a buffering effect, but choosing
+  a larger rlist might be necessary for good energy conservation.
+
+
+NOTE 2 [file grompp.mdp]:
+  Setting nstcalcenergy (10000) equal to nstenergy (500)
+
+
+WARNING 1 [file grompp.mdp]:
+  You are generating velocities so I am assuming you are equilibrating a
+  system. You are using Parrinello-Rahman pressure coupling, but this can
+  be unstable for equilibration. If your system crashes, try equilibrating
+  first with Berendsen pressure coupling. If you are not equilibrating the
+  system, you can probably ignore this warning.
+
+Generating 1-4 interactions: fudge = 1
+Number of degrees of freedom in T-Coupling group Water is 5835.10
+Number of degrees of freedom in T-Coupling group non-Water is 209.90
+
+There were 2 NOTEs
+
+There was 1 WARNING
+
+Back Off! I just backed up chi3_ref.tpr to ./#chi3_ref.tpr.4#
+
+GROMACS reminds you: "It's So Lonely When You Don't Even Know Yourself" (Red Hot Chili Peppers)
+
+Setting the LD random seed to -234939265
+
+Generated 98320 of the 98346 non-bonded parameter combinations
+
+Generated 64935 of the 98346 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'system1'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Setting gen_seed to 2073427802
+
+Velocities were taken from a Maxwell distribution at 298 K
+Analysing residue names:
+There are:     5      Other residues
+There are:   973      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between excluded atoms is 0.389 nm between atom 39 and 47
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 32x32x32, spacing 0.108 0.108 0.108
+
+Estimate for the relative computational load of the PME mesh part: 0.27
+
+This run will generate roughly 2 Mb of data
+               :-) GROMACS - gmx mdrun, 2023-plumed_2.9.0_dev (-:
+
+Executable:   /anvil/projects/x-mth210005/Liyao/plumed/gromacslib/bin/gmx_mpi
+Data prefix:  /anvil/projects/x-mth210005/Liyao/plumed/gromacslib
+Working dir:  /anvil/projects/x-mth210005/Liyao/consensus/chi3_ref/consensus3
+Command line:
+  gmx_mpi mdrun -s ../chi3_ref.tpr -c conf.gro -plumed ../plumed.dat -multidir ./esamble_1 ./esamble_2 ./esamble_3 ./esamble_4 ./esamble_5 ./esamble_6 ./esamble_7 ./esamble_8 ./esamble_9 ./esamble_10 ./esamble_11 ./esamble_12 ./esamble_13 ./esamble_14 ./esamble_15 ./esamble_16 ./esamble_17 ./esamble_18 ./esamble_19 ./esamble_20 ./esamble_21 ./esamble_22 ./esamble_23 ./esamble_24 ./esamble_25 ./esamble_26 ./esamble_27 ./esamble_28 ./esamble_29 ./esamble_30 ./esamble_31 ./esamble_32 ./esamble_33 ./esamble_34 ./esamble_35 ./esamble_36 ./esamble_37 ./esamble_38 ./esamble_39 ./esamble_40 ./esamble_41 ./esamble_42 ./esamble_43 ./esamble_44 ./esamble_45 ./esamble_46 ./esamble_47 ./esamble_48 ./esamble_49 ./esamble_50 ./esamble_51 ./esamble_52 ./esamble_53 ./esamble_54 ./esamble_55 ./esamble_56 ./esamble_57 ./esamble_58 ./esamble_59 ./esamble_60 ./esamble_61 ./esamble_62 ./esamble_63 ./esamble_64 -ntomp 1 -nsteps 5000000 -nb cpu
+
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+
+Back Off! I just backed up md.log to ./#md.log.1#
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Reading file ../chi3_ref.tpr, VERSION 2023-plumed_2.9.0_dev (single precision)
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+
+This is simulation 28 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 29 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+This is simulation 20 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 16 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 17 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+
+This is simulation 21 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 2 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 24 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 25 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+This is simulation 5 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+This is simulation 18 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 27 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+
+This is simulation 22 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 30 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+Using 8 MPI processes
+
+This is simulation 26 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 31 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 19 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 23 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 4 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+This is simulation 3 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 7 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 0 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 1 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 10 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 11 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 6 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+
+This is simulation 8 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 9 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 12 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 13 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+
+This is simulation 14 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 15 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+This is simulation 42 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+Using 8 MPI processes
+
+
+This is simulation 46 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+This is simulation 43 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+This is simulation 47 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+Overriding nsteps with value passed on the command line: 5000000 steps, 5e+03 ps
+
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+
+This is simulation 32 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+This is simulation 62 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+
+This is simulation 33 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+This is simulation 48 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+This is simulation 56 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 57 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 60 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 40 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 41 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+
+This is simulation 36 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 37 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 39 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 38 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 34 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 44 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 45 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 35 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+Using 8 MPI processes
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+Non-default thread affinity set, disabling internal thread affinity
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 8 MPI processes
+
+This is simulation 61 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+
+This is simulation 49 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+This is simulation 63 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+This is simulation 53 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 54 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 59 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 52 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 55 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 50 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 51 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+This is simulation 58 out of 64 running as a composite GROMACS
+multi-simulation job. Setup for this simulation:
+
+Using 8 MPI processes
+
+Using 8 MPI processes
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Non-default thread affinity set, disabling internal thread affinity
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+
+
+Using 1 OpenMP thread per MPI process
+
+Using 1 OpenMP thread per MPI process
+Using 1 OpenMP thread per MPI process
+
+
+
+Using 1 OpenMP thread per MPI process
+
+
+
+Using 1 OpenMP thread per MPI process
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+Using 1 OpenMP thread per MPI process
+
+Using 1 OpenMP thread per MPI process
+
+
+
+Using 1 OpenMP thread per MPI process
+
+Using 1 OpenMP thread per MPI process
+
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+Using 1 OpenMP thread per MPI process
+
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+
+Using 1 OpenMP thread per MPI process
+
+Using 1 OpenMP thread per MPI process
+
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Generic title in water'
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+starting mdrun 'Generic title in water'
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Generic title in water'
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Generic title in water'
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+starting mdrun 'Generic title in water'
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Generic title in water'
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up traj_comp.xtc to ./#traj_comp.xtc.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+5000000 steps,   5000.0 ps.
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+
+Back Off! I just backed up ener.edr to ./#ener.edr.1#
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+5000000 steps,   5000.0 ps.
+starting mdrun 'Generic title in water'
+starting mdrun 'Generic title in water'
+5000000 steps,   5000.0 ps.
+5000000 steps,   5000.0 ps.
+7
+7
+7
+7
+7
+7
+7
+7
+9
+9
+9
+9
+9
+9
+9
+36
+9
+13
+13
+13
+13
+36
+13
+13
+13
+13
+36
+8
+8
+8
+8
+24
+8
+24
+8
+36
+24
+8
+24
+8
+10
+24
+10
+24
+10
+36
+24
+10
+24
+10
+10
+10
+10
+11
+11
+36
+11
+11
+11
+11
+11
+11
+2
+2
+36
+2
+2
+2
+2
+2
+2
+4
+4
+36
+4
+41
+4
+41
+4
+41
+4
+20
+41
+4
+41
+4
+41
+12
+43
+12
+43
+12
+43
+12
+43
+52
+43
+12
+12
+43
+52
+12
+43
+12
+52
+20
+0
+43
+0
+52
+45
+0
+52
+41
+0
+0
+41
+52
+45
+0
+45
+45
+0
+52
+45
+0
+45
+45
+1
+45
+1
+40
+1
+40
+1
+40
+20
+52
+1
+40
+1
+40
+1
+40
+1
+40
+3
+40
+44
+20
+3
+44
+20
+3
+44
+3
+20
+44
+3
+20
+44
+3
+44
+20
+3
+56
+31
+3
+44
+31
+44
+5
+5
+31
+31
+37
+37
+5
+31
+37
+5
+31
+31
+5
+38
+38
+5
+31
+38
+16
+5
+38
+5
+16
+16
+6
+38
+38
+38
+16
+6
+16
+16
+6
+38
+32
+6
+56
+32
+16
+6
+16
+32
+6
+32
+32
+22
+6
+22
+22
+6
+32
+32
+14
+32
+22
+22
+37
+14
+22
+14
+37
+56
+22
+14
+37
+56
+14
+37
+22
+57
+14
+19
+19
+37
+57
+14
+47
+19
+57
+19
+14
+47
+57
+47
+15
+21
+47
+15
+48
+21
+47
+15
+48
+15
+21
+47
+47
+21
+15
+48
+21
+48
+47
+15
+21
+48
+21
+15
+39
+21
+15
+39
+39
+48
+48
+53
+25
+25
+39
+39
+25
+39
+53
+53
+53
+39
+25
+25
+39
+25
+56
+56
+42
+56
+56
+42
+25
+28
+48
+42
+49
+42
+28
+42
+28
+42
+28
+49
+28
+42
+28
+42
+28
+49
+53
+46
+46
+53
+28
+46
+29
+29
+53
+53
+46
+54
+46
+29
+29
+46
+29
+54
+54
+33
+29
+33
+29
+54
+29
+55
+33
+33
+33
+18
+55
+18
+55
+18
+33
+33
+18
+55
+33
+18
+55
+55
+34
+18
+34
+18
+55
+55
+18
+34
+57
+34
+19
+57
+19
+57
+34
+34
+19
+34
+19
+57
+61
+34
+23
+61
+23
+35
+61
+23
+35
+23
+23
+61
+35
+61
+35
+23
+61
+35
+23
+35
+23
+63
+35
+63
+35
+25
+49
+26
+46
+49
+46
+49
+26
+49
+26
+49
+54
+26
+26
+54
+54
+26
+26
+54
+26
+58
+30
+30
+30
+30
+58
+30
+58
+58
+58
+58
+58
+58
+30
+30
+60
+30
+17
+17
+60
+60
+17
+17
+60
+60
+17
+60
+17
+17
+17
+60
+27
+60
+61
+27
+61
+27
+27
+62
+62
+62
+27
+27
+27
+62
+27
+62
+62
+62
+62
+63
+63
+63
+63
+63
+63
+50
+50
+50
+50
+50
+50
+50
+50
+51
+51
+51
+51
+51
+51
+51
+51
+59
+59
+59
+59
+59
+59
+59
+59

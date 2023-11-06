@@ -1,0 +1,31 @@
+#!/bin/bash
+## FILENAME:  myjobsubmissionfile
+#
+#SBATCH -A mth210005       # allocation name
+#SBATCH --nodes=4        # Total # of nodes 
+#SBATCH --ntasks=512    # Total # of MPI tasks
+#SBATCH --time=4:00:00   # Total run time limit (hh:mm:ss)
+#SBATCH -J myjobname     # Job name
+#SBATCH -p wholenode     # Queue (partition) name
+#SBATCH --mail-user=useremailaddress
+#SBATCH--mail-type=all   # Send email to above address at begin and end of job
+
+# Manage processing environment, load compilers, and applications.
+ml restore pp
+conda activate plumed_pytorch
+
+. /anvil/projects/x-mth210005/Liyao/pytorch/torch/sourceme.sh 
+. /anvil/projects/x-mth210005/Liyao/plumed/plumed2/sourceme.sh
+. /anvil/projects/x-mth210005/Liyao/plumed/gromacslib/bin/GMXRC.bash
+python3 -c "import md_file as mdf;mdf.generate_plumed_file(33);"
+gmx_mpi grompp -o chi3_ref.tpr -c conf.gro -f grompp.mdp -maxwarn 3
+gmx_mpi mdrun -s chi3_ref.tpr  -plumed ./plumed1.dat -ntomp 1 -nsteps 100  -c conf.gro -nb cpu
+gmx_mpi grompp -o chi3_ref.tpr -c conf.gro -f grompp.mdp -maxwarn 3
+python3 -c "import post_processing as post;import numpy as np;X = np.loadtxt('./COLVAR');X = X[-64:,-9:];post.generate_at_file(X)"
+srun -n  512 gmx_mpi mdrun -s ../chi3_ref.tpr -c conf.gro -plumed ../plumed.dat -multidir ./esamble_? ./esamble_??  -ntomp 1 -nsteps 5000000  -nb cpu 
+rm -R ./esamble_*/#*
+cp ./esamble_1/conf.gro ./
+cp ./esamble_1/mean.txt ./data_save/mean33.txt
+python3 -c "import post_processing as post;import numpy as np;X,F = post.collect_file(9);np.savez('data_save/data33.npz',X=X,F=F);"
+sacct --format=JobID,Submit,Partition,CPUTime,Elapsed,MaxRSS,NodeList,ReqCPUS --units=M -j $SLURM_JOBID
+            

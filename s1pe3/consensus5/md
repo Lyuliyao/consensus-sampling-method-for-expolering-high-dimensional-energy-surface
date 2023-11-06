@@ -1,0 +1,23 @@
+#!/bin/bash
+## FILENAME:  myjobsubmissionfile
+#
+#SBATCH -A multiscaleml      # allocation name
+#SBATCH --nodes=1-10         # Total # of nodes 
+#SBATCH -n 512             # Total # of nodes 
+#SBATCH --time=4:00:00        # Total run time limit (hh:mm:ss)
+#SBATCH -J md          # Job name         # Name of stderr error file
+#SBATCH -C "amd20"
+#SBATCH --mem-per-cpu=8G
+#SBATCH --qos=scavenger
+
+module restore plumed2_torch
+conda activate  pytorch_18
+source  /mnt/research/MultiscaleML_group/Liyao/plumed/sourceme5.sh 
+srun -n 1 /mnt/home/lyuliyao/gromacs_2020/bin/gmx_mpi grompp -o chi3.tpr -c conf.gro -f grompp.mdp -maxwarn 2
+srun -n 1 /mnt/home/lyuliyao/gromacs_2020/bin/gmx_mpi mdrun -s  ./chi3.tpr  -plumed ./plumed1.dat -ntomp 1 -nsteps 300  -c conf.gro -nb cpu
+python3 -c "import post_processing as post;import numpy as np;X = np.loadtxt('./COLVAR');X = X[-64:,-9:];post.generate_at_file(X)"
+srun -n  512  /mnt/home/lyuliyao/gromacs_2020/bin/gmx_mpi mdrun -s  ../chi3.tpr -c conf.gro -plumed ../plumed.dat -multidir ./esamble_? ./esamble_?? -ntomp 1 -nsteps 5000000  -nb cpu
+rm -R ./esamble_*/#*
+cp ./esamble_1/conf.gro ./
+sacct --format=JobID,Submit,Partition,CPUTime,Elapsed,MaxRSS,NodeList,ReqCPUS --units=M -j $SLURM_JOBID
+            

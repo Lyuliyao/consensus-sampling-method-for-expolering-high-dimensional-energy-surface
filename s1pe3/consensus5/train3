@@ -1,0 +1,23 @@
+#!/bin/bash
+## FILENAME:  myjobsubmissionfile
+#
+##SBATCH -A myallocation       # allocation name
+#SBATCH --nodes=1             # Total # of nodes 
+#SBATCH --ntasks-per-node=5   # Number of MPI ranks per node (one rank per GPU)
+#SBATCH --gres=gpu:1          # Number of GPUs per node
+#SBATCH --time=4:00:00        # Total run time limit (hh:mm:ss)
+#SBATCH -J myjobname          # Job name         # Name of stderr error file
+#SBATCH -p gpu                # Queue (partition) name
+#SBATCH --mail-user=lyuliyao@msu.edu;
+#SBATCH --mail-type=all       # Send email to above address at begin and end of job
+
+# Manage processing environment, load compilers, and applications.
+
+module purge
+module load openmpi/4.1.1-gcc8.3.1
+module load fftw/3.3.8
+module load anaconda
+conda activate  pytorch10 
+python3 -c "import train as tr; import model as model ;p = tr.train(9,3)"
+sacct --format=JobID,Submit,Partition,CPUTime,Elapsed,MaxRSS,NodeList,ReqCPUS --units=M -j $SLURM_JOBID
+            

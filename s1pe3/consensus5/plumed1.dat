@@ -1,0 +1,16 @@
+
+
+    # vim:ft=plumed
+    # since simulation run in subdir, we refer to a file in the parent dir:
+    ome1: TORSION ATOMS=6,1,7,8
+    phi1: TORSION ATOMS=1,7,8,11
+    psi1: TORSION ATOMS=7,8,11,30
+    ome2: TORSION ATOMS=8,11,30,31
+    phi2: TORSION ATOMS=11,30,31,34
+    psi2: TORSION ATOMS=30,31,34,53
+    ome3: TORSION ATOMS=31,34,53,54
+    phi3: TORSION ATOMS=34,53,54,57
+    psi3: TORSION ATOMS=53,54,57,76
+    ene: ENERGY
+    PRINT ARG=ome1,phi1,psi1,ome2,phi2,psi2,ome3,phi3,psi3 FILE=COLVAR STRIDE=1
+    
