@@ -1,0 +1,37 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) xalt/2.10.45
+             :-) GROMACS - gmx mdrun, 2023.2-plumed_2.10.0_dev (-:
+
+Executable:   /home/x-lyuliyao/gromacs/bin/gmx_mpi
+Data prefix:  /home/x-lyuliyao/gromacs
+Working dir:  /anvil/projects/x-mth210005/Liyao/AIMZ/ala16/example_2D_12
+Command line:
+  gmx_mpi mdrun -s ./ala16.tpr -plumed plumed_phi14_phi15.dat -nsteps 10000000 -ntomp 1
+
+
+Sorry couldn't backup md.log to ./#md.log.9#
+Reading file ./ala16.tpr, VERSION 2023.2-plumed_2.10.0_dev (single precision)
+Overriding nsteps with value passed on the command line: 10000000 steps, 2e+04 ps
+Can not increase nstlist because verlet-buffer-tolerance is not set or used
+
+Using 16 MPI processes
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread per MPI process
+
+
+Sorry couldn't backup traj_comp.xtc to ./#traj_comp.xtc.7#
+
+Sorry couldn't backup traj.trr to ./#traj.trr.7#
+
+Sorry couldn't backup ener.edr to ./#ener.edr.7#
+
+WARNING: This run will generate roughly 4792 Mb of data
+
+starting mdrun 'Protein in water'
+10000000 steps,  20000.0 ps.
+slurmstepd: error: Detected 1 oom_kill event in StepId=2738563.0. Some of the step tasks have been OOM Killed.
+srun: error: a098: task 0: Out Of Memory

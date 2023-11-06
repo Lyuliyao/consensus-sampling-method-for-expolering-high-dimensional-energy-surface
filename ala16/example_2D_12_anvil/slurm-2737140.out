@@ -1,0 +1,163 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) xalt/2.10.45
+             :-) GROMACS - gmx mdrun, 2023.2-plumed_2.10.0_dev (-:
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+
+Executable:   /home/x-lyuliyao/gromacs/bin/gmx_mpi
+Data prefix:  /home/x-lyuliyao/gromacs
+Working dir:  /anvil/projects/x-mth210005/Liyao/AIMZ/ala16/example_2D_12
+Command line:
+  gmx_mpi mdrun -s ./ala16.tpr -plumed plumed_phi8_phi9.dat -nsteps 10000000 -ntomp 1
+
+
+-------------------------------------------------------
+Program:     gmx mdrun, version 2023.2-plumed_2.10.0_dev
+Source file: src/gromacs/commandline/cmdlineparser.cpp (line 271)
+Function:    void gmx::CommandLineParser::parse(int*, char**)
+MPI rank:    1 (out of 4)
+
+Error in user input:
+Invalid command-line options
+  In command-line option -plumed
+    File 'plumed_phi8_phi9.dat' does not exist or is not accessible.
+    The file could not be opened.
+      Reason: No such file or directory
+      (call to fopen() returned error code 2)
+
+-------------------------------------------------------
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------
+Program:     gmx mdrun, version 2023.2-plumed_2.10.0_dev
+Source file: src/gromacs/commandline/cmdlineparser.cpp (line 271)
+Function:    void gmx::CommandLineParser::parse(int*, char**)
+MPI rank:    3 (out of 4)
+
+Error in user input:
+Invalid command-line options
+  In command-line option -plumed
+    File 'plumed_phi8_phi9.dat' does not exist or is not accessible.
+    The file could not be opened.
+      Reason: No such file or directory
+      (call to fopen() returned error code 2)
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------
+
+-------------------------------------------------------
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 1 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+In: PMI_Abort(1, N/A)
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 3 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+In: PMI_Abort(1, N/A)
+Program:     gmx mdrun, version 2023.2-plumed_2.10.0_dev
+
+-------------------------------------------------------
+Program:     gmx mdrun, version 2023.2-plumed_2.10.0_dev
+Source file: src/gromacs/commandline/cmdlineparser.cpp (line 271)
+Function:    void gmx::CommandLineParser::parse(int*, char**)
+MPI rank:    2 (out of 4)
+
+Error in user input:
+Invalid command-line options
+  In command-line option -plumed
+    File 'plumed_phi8_phi9.dat' does not exist or is not accessible.
+    The file could not be opened.
+      Reason: No such file or directory
+      (call to fopen() returned error code 2)
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------
+Source file: src/gromacs/commandline/cmdlineparser.cpp (line 271)
+Function:    void gmx::CommandLineParser::parse(int*, char**)
+MPI rank:    0 (out of 4)
+
+Error in user input:
+Invalid command-line options
+  In command-line option -plumed
+    File 'plumed_phi8_phi9.dat' does not exist or is not accessible.
+    The file could not be opened.
+      Reason: No such file or directory
+      (call to fopen() returned error code 2)
+
+For more information and tips for troubleshooting, please check the GROMACS
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 2 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------
+In: PMI_Abort(1, N/A)
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+In: PMI_Abort(1, N/A)
+slurmstepd: error: *** STEP 2737140.0 ON a005 CANCELLED AT 2023-09-20T19:17:13 ***
+slurmstepd: error: *** STEP 2737140.0 ON a005 CANCELLED AT 2023-09-20T19:17:13 ***
+srun: error: a005: tasks 0-3: Killed
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.10.0-dev (git: ed80ed1d1-dirty) compiled on Aug 18 2023 at 12:25:30
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /anvil/projects/x-mth210005/Liyao/plumed/plumed2/
+PLUMED: For installed feature, see /anvil/projects/x-mth210005/Liyao/plumed/plumed2//src/config/config.txt
+PLUMED: Molecular dynamics engine: 
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 1
+PLUMED: File suffix: 
+PLUMED: Timestep: 0.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+[a005:3675730:0:3675730] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x8)
+==== backtrace (tid:3675730) ====
+ 0 0x0000000000012cf0 __funlockfile()  :0
+ 1 0x0000000000593946 std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::size()  ???:0
+ 2 0x0000000000759609 PLMD::cltools::CLToolSumHills::main()  ???:0
+ 3 0x000000000081a5f6 PLMD::CLToolMain::run()  ???:0
+ 4 0x0000000000818f8a PLMD::CLToolMain::cmd()  ???:0
+ 5 0x000000000085e192 PLMD::PlumedMain::cmd()  ???:0
+ 6 0x00000000008743b9 plumed_plumedmain_cmd_safe_nothrow()  PlumedMainInitializer.cpp:0
+ 7 0x000000000041c494 plumed_cmd_safe_nothrow()  ???:0
+ 8 0x0000000000412987 PLMD::Plumed::cmd_priv()  ???:0
+ 9 0x00000000004190b5 PLMD::Plumed::plumed_cmd_cxx<int>()  ???:0
+10 0x00000000004181cb PLMD::Plumed::cmd<int*>()  ???:0
+11 0x00000000004117c3 main()  ???:0
+12 0x000000000003ad85 __libc_start_main()  ???:0
+13 0x00000000004114de _start()  ???:0
+=================================
+/var/spool/slurm/job2737140/slurm_script: line 21: 3675730 Segmentation fault      plumed sum_hills --hills HILLS_phi8_phi9 --outfile fes_phi8_phi9.dat

@@ -1,0 +1,29 @@
+#!/bin/bash
+## FILENAME:  myjobsubmissionfile
+#
+#SBATCH -A multiscaleml      # allocation name
+#SBATCH --nodes=1-8          # Total # of nodes 
+#SBATCH -n 512            # Total # of nodes 
+#SBATCH --time=4:00:00        # Total run time limit (hh:mm:ss)
+#SBATCH --constraint=amd20
+#SBATCH --mem-per-cpu=4G
+#SBATCH --job=md1
+module restore plumed2_torch
+conda activate plumed2torch
+source  /mnt/research/MultiscaleML_group/Liyao/plumed/sourceme6.sh 
+source /mnt/home/lyuliyao/gromacs_2020/bin/GMXRC.bash
+export GMX_MAXBACKUP=-1
+srun -N 1 -n 1 /mnt/home/lyuliyao/gromacs_2020/bin/gmx_mpi grompp -o ala16.tpr -c conf.gro -f grompp2.mdp -maxwarn 3
+python3 -c "import md_file as mdf;mdf.generate_plumed_file1(96)"
+srun -N 1 -n 1 /mnt/home/lyuliyao/gromacs_2020/bin/gmx_mpi mdrun -s ala16.tpr -plumed ./plumed1.dat -ntomp 1 -nsteps 10000  -c conf.gro -nb cpu
+srun -N 1 -n 1 /mnt/home/lyuliyao/gromacs_2020/bin/gmx_mpi grompp -o ala16.tpr -c conf.gro -f grompp.mdp -maxwarn 3
+python3 -c "import post_processing as post;import numpy as np;X = np.loadtxt('./COLVAR');X = X[-64:,-30:];post.generate_at_file(X)"
+python3 -c "import md_file as mdf;mdf.generate_plumed_file(96)"
+srun -n  512  /mnt/home/lyuliyao/gromacs_2020/bin/gmx_mpi mdrun -s ../ala16.tpr -c conf.gro -plumed ../plumed.dat -multidir ./esamble_? ./esamble_??  -ntomp 1 -nsteps 2000000  -nb cpu 
+cp ./esamble_1/conf.gro ./
+python3 -c "import post_processing as post;import numpy as np; X,F = post.collect_file(30); np.savez('data_save/data96.npz',X=X,F=F);"
+cp ./esamble_1/mean.txt ./data_save/mean96.txt
+rm -R #*
+rm -R bck.*
+sacct --format=JobID,Submit,Partition,CPUTime,Elapsed,MaxRSS,NodeList,ReqCPUS --units=M -j $SLURM_JOBID
+            

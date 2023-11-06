@@ -1,0 +1,21 @@
+#!/bin/bash
+# FILENAME:  myjobsubmissionfile
+
+#SBATCH -A mth210005   # Allocation name 
+#SBATCH --nodes=1         # Total # of nodes (must be 1 for serial job)
+#SBATCH --ntasks=4        # Total # of MPI tasks (should be 1 for serial job)
+#SBATCH --time=24:00:00    # Total run time limit (hh:mm:ss)
+#SBATCH -J myjobname      # Job name
+#SBATCH -p shared  # Queue (partition) name
+#SBATCH --mail-user=useremailaddress
+#SBATCH --mail-type=all   # Send email to above address at begin and end of job
+
+ml purge
+ml modtree/cpu
+ml anaconda
+conda activate plumed_pytorch
+source /home/x-lyuliyao/gromacs/bin/GMXRC.bash
+source /anvil/projects/x-mth210005/Liyao/plumed/sourceme.sh 
+source /anvil/projects/x-mth210005/Liyao/plumed/plumed2/sourceme.sh
+srun -n 4 gmx_mpi mdrun -s ./ala16.tpr -plumed plumed_phi8_psi8.dat -nsteps 50000000 -ntomp 1
+plumed sum_hills --hills HILLS_phi8_psi8 --outfile fes_phi8_psi8.dat
