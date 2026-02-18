@@ -44,7 +44,7 @@ Reference links:
 - PLUMED installation with LibTorch linking (official): https://www.plumed.org/doc-v2.10/user-doc/html/_installation.html
 - PLUMED `PYTORCH` tutorial example: https://www.plumed-tutorials.org/lessons/23/004/data/markdown/Ex-2.html
 
-##  Why both `F6` and `F11`
+## Plumed plug-in code `F6` and `F11`
 
 The two custom actions correspond to two model forms in the paper:
 
@@ -131,11 +131,3 @@ To fully satisfy strict long-term reproducibility checks, complete these items i
 - Replace absolute external RiD paths in plotting notebooks with local repository paths. Current external path usage appears in `s1pe/figure.ipynb`.
 - Ensure scripts/notebooks for all remaining reported tables are explicitly included in this repository snapshot (for example, iteration-wise error tables not yet fully scripted in one command path).
 - Upload a zipped immutable snapshot to SISC supplementary materials and record the exact filename and checksum in Section 1.
-
-## 9. SISC badge checklist (author-facing)
-
-- [x] Public code repository is available.
-- [x] Main data artifacts and parameter files are in the repository (`.npz`, `.dat`, `.mdp`, `.tpr`, run scripts).
-- [x] README documents how to reproduce numerical results.
-- [ ] Immutable supplementary zip snapshot uploaded with manuscript.
-- [ ] DOI snapshot metadata filled (if used).
